@@ -1,0 +1,20 @@
+{
+  "meta": {"title": "三步操作流示例（未执行）", "brand": "模板示例", "footer": ["纯文字示例，尚未制作媒体。"]},
+  "steps": [
+    {"id": 1, "short_title": "确认创意", "title": "确认创意", "status": "planned", "environment": "工具待核实", "tools": [], "input": "用户创意", "action": "整理故事与待验证动作", "output": "计划产物，尚未制作", "content": "把关键动作写清楚。", "media": []},
+    {"id": 2, "short_title": "验证样段", "title": "验证样段", "status": "planned", "environment": "工具与机器待核实", "tools": [], "input": "确认的创意", "action": "使用已授权工具验证关键动作", "output": "暂无样段", "content": "按实际执行记录填写软件和硬件。", "media": []},
+    {"id": 3, "short_title": "完成交付", "title": "完成交付", "status": "planned", "environment": "实际执行环境待核实", "tools": [], "input": "通过的小样", "action": "完成后续剪辑并验收", "output": "尚未开始", "content": "保留分轨与真实产物。", "media": []}
+  ],
+  "assets": {},
+  "chart": {
+    "lanes": [{"name": "用户与策划工具", "place": "hybrid", "detail": "实际工具待确认"}, {"name": "制作与后期工具", "place": "local", "detail": "示例位置；执行前核实"}],
+    "nodes": [
+      {"id": "plan", "row": 0, "step": 1, "place": "hybrid", "title": "创意计划", "text": "未执行", "caption": "示例步骤"},
+      {"id": "pilot", "row": 1, "step": 2, "place": "local", "title": "待制作样段", "text": "暂无视频", "caption": "尚未验证"},
+      {"id": "delivery", "row": 1, "step": 3, "place": "local", "title": "计划交付", "text": "暂无成片", "caption": "尚未开始"}
+    ],
+    "links": [["plan", "pilot"], ["pilot", "delivery"]]
+  },
+  "runtime": [],
+  "runtime_groups": []
+}

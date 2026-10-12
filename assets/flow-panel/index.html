@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><title>动漫混剪操作流</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<header class="masthead">
+<div class="eyebrow"><span id="brand">动漫混剪</span><span class="sep">/</span> 可视化操作流 <span class="edition" id="case-date"></span></div>
+<div class="hero"><div><h1 id="page-title"></h1><p class="lead" id="page-lead"></p></div><button class="final-launch" id="final-launch"><span class="play-symbol">▶</span><span><b id="final-label"></b><small id="final-subtitle"></small></span></button></div>
+<div class="environment-strip" id="environment-strip"></div>
+<div class="live-status" role="status" aria-live="polite"><span id="connection-status">正在读取报告…</span><time id="last-update"></time></div>
+</header>
+<main>
+<section class="map-section" aria-label="步骤与工具交叉流程图">
+<div class="map-toolbar"><div class="view-switch" aria-label="流程图大小"><button id="overview" class="active" aria-pressed="true">步骤总览</button><button id="expanded" aria-pressed="false">放大细看</button></div><p class="map-hint">在图内滚动；点步骤看详情，图片可放大、视频可播放。</p><label class="focus-label">突出显示 <select id="environment-filter"><option value="all">全部环节</option><option value="local">本机处理</option><option value="cloud">云端 GPU</option><option value="service">内置服务</option><option value="hybrid">本机与服务</option></select></label></div>
+<div id="map-scroll" class="map-scroll" tabindex="0" aria-label="步骤工具矩阵，可横向和纵向滚动"><div id="matrix" class="matrix"><svg id="connections" class="connections" aria-hidden="true"><defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#b8c6c1"/></marker></defs><g id="connection-paths"></g></svg></div></div>
+<div class="map-caption"><span>横轴：制作步骤 →</span><span>右侧纵轴：工具与运行位置</span><span>以真实产物和执行记录为准。</span></div>
+</section>
+<section class="explanation" id="handoff-section"><div class="section-intro"><h2 id="handoff-title"></h2><p id="handoff-description"></p></div><div class="handoff" id="handoff-items"></div></section>
+<section class="runtime-section" id="runtime-section" aria-labelledby="runtime-heading"><div class="section-intro"><h2 id="runtime-heading">软件装在哪，模型跑在哪</h2><p>本案的机器、软件与权重。展开可查看记录的文件名和状态。</p></div><div id="runtime-cards" class="runtime-cards"></div></section>
+<footer id="page-footer"></footer>
+</main>
+<dialog id="step-dialog" aria-labelledby="detail-title"><div class="dialog-top"><span id="detail-kicker"></span><button id="close-dialog" aria-label="关闭步骤详情">关闭 ×</button></div><div class="dialog-scroll"><div class="detail-heading"><h2 id="detail-title"></h2><p id="detail-subtitle"></p></div><div id="detail-content"></div></div><nav class="dialog-nav"><button id="previous-step">← 上一步</button><span id="detail-count"></span><button id="next-step">下一步 →</button></nav></dialog>
+<dialog id="image-dialog" aria-label="放大查看真实产物"><button id="close-image" aria-label="关闭放大图片">关闭 ×</button><img id="large-image" alt=""><p id="large-caption"></p></dialog>
+<noscript>本页需要浏览器 JavaScript 显示步骤和媒体。请保持 HTML、脚本和 media 文件夹在一起。</noscript>
+<script src="data.js"></script><script src="app.js"></script>
+</body></html>
