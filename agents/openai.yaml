@@ -1,0 +1,4 @@
+interface:
+  display_name: "动漫混剪"
+  short_description: "把动漫创意落成可见剧情，分层跟踪与遮挡先用真实动态样段验证"
+  default_prompt: "使用 $anime-editing，把我的创意和原作素材转成可执行镜头方案，先验证最难的动作或情绪连接，再完成样片。涉及跨番互动时，让人物、道具和动作关系在画面中成立。"
