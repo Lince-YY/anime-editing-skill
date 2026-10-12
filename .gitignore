@@ -1,0 +1,37 @@
+# Local state and generated panels
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+output/
+outputs/
+dist/
+.env
+.env.*
+!.env.example
+*.log
+
+# Production media, archives and model weights are not part of this skill
+media/
+models/
+weights/
+*.mp4
+*.mkv
+*.mov
+*.webm
+*.wav
+*.mp3
+*.flac
+*.zip
+*.7z
+*.safetensors
+*.ckpt
+*.pth
+*.pt
+*.onnx
+
+# Live local records and writer locks
+.flow-panel-session.json
+*.json.lock/
+*.tmp
