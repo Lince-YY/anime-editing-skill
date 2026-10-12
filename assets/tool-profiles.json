@@ -1,0 +1,231 @@
+{
+  "schema_version": "1.0",
+  "verified_on": "2026-10-12",
+  "tools": {
+    "python": {
+      "official_source": "https://www.python.org/downloads/",
+      "verified_on": "2026-10-12",
+      "license_url": "https://docs.python.org/3/license.html",
+      "requirements": [
+        "Python >=3.9 for bundled scripts"
+      ],
+      "compatibility": "macOS/Windows/Linux; model projects may require another Python version",
+      "version_strategy": "Pin a reviewed upstream release or commit and its requirements; record exact resolved versions; do not use an unreviewed latest build",
+      "isolation": "Separate project venv/conda environment or standalone application folder; keep the current working environment intact",
+      "installation_advice": "Use official supported OS installer only if existing Python is absent. Model Python versions follow upstream, separately.",
+      "download_size_gb": null,
+      "rollback": "Remove only the newly created environment/application folder after preserving inputs and outputs; restore prior PATH/settings if changed",
+      "verify_commands": [
+        "python --version"
+      ]
+    },
+    "git": {
+      "official_source": "https://git-scm.com/downloads",
+      "verified_on": "2026-10-12",
+      "license_url": "https://git-scm.com/about/free-and-open-source",
+      "requirements": [
+        "Git for upstream source checkout"
+      ],
+      "compatibility": "macOS/Windows/Linux",
+      "version_strategy": "Pin a reviewed upstream release or commit and its requirements; record exact resolved versions; do not use an unreviewed latest build",
+      "isolation": "Separate project venv/conda environment or standalone application folder; keep the current working environment intact",
+      "installation_advice": "Use official downloads or a trusted OS package manager; record installed version.",
+      "download_size_gb": null,
+      "rollback": "Remove only the newly created environment/application folder after preserving inputs and outputs; restore prior PATH/settings if changed",
+      "verify_commands": [
+        "git --version"
+      ]
+    },
+    "ffmpeg": {
+      "official_source": "https://ffmpeg.org/download.html",
+      "verified_on": "2026-10-12",
+      "license_url": "https://ffmpeg.org/legal.html",
+      "requirements": [
+        "ffmpeg and ffprobe build supporting chosen codecs"
+      ],
+      "compatibility": "macOS/Windows/Linux; build and codec support differ",
+      "version_strategy": "Pin a reviewed upstream release or commit and its requirements; record exact resolved versions; do not use an unreviewed latest build",
+      "isolation": "Separate project venv/conda environment or standalone application folder; keep the current working environment intact",
+      "installation_advice": "Select a build linked from official download page or trusted OS package manager; check its build license and codec configuration.",
+      "download_size_gb": null,
+      "rollback": "Remove only the newly created environment/application folder after preserving inputs and outputs; restore prior PATH/settings if changed",
+      "verify_commands": [
+        "ffmpeg -version",
+        "ffprobe -version"
+      ]
+    },
+    "ffprobe": {
+      "official_source": "https://ffmpeg.org/download.html",
+      "verified_on": "2026-10-12",
+      "license_url": "https://ffmpeg.org/legal.html",
+      "requirements": [
+        "ffmpeg and ffprobe build supporting chosen codecs"
+      ],
+      "compatibility": "macOS/Windows/Linux; build and codec support differ",
+      "version_strategy": "Pin a reviewed upstream release or commit and its requirements; record exact resolved versions; do not use an unreviewed latest build",
+      "isolation": "Separate project venv/conda environment or standalone application folder; keep the current working environment intact",
+      "installation_advice": "Select a build linked from official download page or trusted OS package manager; check its build license and codec configuration.",
+      "download_size_gb": null,
+      "rollback": "Remove only the newly created environment/application folder after preserving inputs and outputs; restore prior PATH/settings if changed",
+      "verify_commands": [
+        "ffmpeg -version",
+        "ffprobe -version"
+      ]
+    },
+    "torch": {
+      "official_source": "https://pytorch.org/get-started/locally/",
+      "verified_on": "2026-10-12",
+      "license_url": "https://github.com/pytorch/pytorch/blob/main/LICENSE",
+      "requirements": [
+        "Tool-matched Python/PyTorch/driver versions"
+      ],
+      "compatibility": "Choose CPU/CUDA/MPS only when both upstream tool and this torch build support them",
+      "version_strategy": "Pin a reviewed upstream release or commit and its requirements; record exact resolved versions; do not use an unreviewed latest build",
+      "isolation": "Separate project venv/conda environment or standalone application folder; keep the current working environment intact",
+      "installation_advice": "Use official selector within the selected model isolated environment, constrained by that model requirements. GPU availability alone is insufficient.",
+      "download_size_gb": null,
+      "rollback": "Remove only the newly created environment/application folder after preserving inputs and outputs; restore prior PATH/settings if changed",
+      "verify_commands": [
+        "python -c \"import torch; print(torch.__version__); print(torch.cuda.is_available())\""
+      ]
+    },
+    "anime2sketch": {
+      "official_source": "https://github.com/Mukosame/Anime2Sketch",
+      "verified_on": "2026-10-12",
+      "license_url": "https://github.com/Mukosame/Anime2Sketch/blob/master/LICENSE",
+      "requirements": [
+        "Upstream requirements.txt, test.py and separately obtained weights"
+      ],
+      "compatibility": "Upstream test.py selects CPU when --gpu_ids is omitted (default empty); target OS/torch combination requires pilot. Do not pass -1 as a CPU selector.",
+      "version_strategy": "Pin a reviewed upstream release or commit and its requirements; record exact resolved versions; do not use an unreviewed latest build",
+      "isolation": "Separate project venv/conda environment or standalone application folder; keep the current working environment intact",
+      "installation_advice": "Review repository requirements and weight license; clone a pinned revision into a separate project; do not infer weights from source marker.",
+      "download_size_gb": null,
+      "rollback": "Remove only the newly created environment/application folder after preserving inputs and outputs; restore prior PATH/settings if changed",
+      "verify_commands": [
+        "python test.py --help"
+      ],
+      "evidence_urls": [
+        "https://raw.githubusercontent.com/Mukosame/Anime2Sketch/master/test.py"
+      ]
+    },
+    "tooncomposer": {
+      "official_source": "https://github.com/TencentARC/ToonComposer",
+      "verified_on": "2026-10-12",
+      "license_url": "https://github.com/TencentARC/ToonComposer/blob/main/LICENSE",
+      "requirements": [
+        "Upstream Python 3.10 conda environment, requirements.txt, gradio==5.25.2, Wan2.1 and ToonComposer weights"
+      ],
+      "compatibility": "Default device cuda:0; upstream lists cpu option, with no acceptable-performance claim; Linux flash-attn is recommended",
+      "version_strategy": "Pin a reviewed upstream release or commit and its requirements; record exact resolved versions; do not use an unreviewed latest build",
+      "isolation": "Separate project venv/conda environment or standalone application folder; keep the current working environment intact",
+      "installation_advice": "Review exact upstream requirements; create separate conda env; measure model download size and free disk first; app launch can automatically download weights, so do not launch without download authorization.",
+      "download_size_gb": null,
+      "rollback": "Remove only the newly created environment/application folder after preserving inputs and outputs; restore prior PATH/settings if changed",
+      "verify_commands": [
+        "python -c \"import torch; print(torch.__version__); print(torch.cuda.is_available())\""
+      ],
+      "resource_reference": {
+        "vram_gb_approx": 57,
+        "resolution": "480p",
+        "frames": 61,
+        "classification": "upstream_workload_observation_not_minimum",
+        "source": "https://github.com/TencentARC/ToonComposer#-configuration",
+        "caveat": "Not a universal threshold; per-GPU reported capacity is only a paper comparison, not free VRAM or a successful smoke test."
+      }
+    },
+    "gpt_sovits": {
+      "official_source": "https://github.com/RVC-Boss/GPT-SoVITS",
+      "verified_on": "2026-10-12",
+      "license_url": "https://github.com/RVC-Boss/GPT-SoVITS/blob/main/LICENSE",
+      "requirements": [
+        "Pinned upstream runtime, weights, ffmpeg and ffprobe; usable voice reference"
+      ],
+      "compatibility": "Upstream tested CPU, CUDA and Apple silicon; macOS README warns about GPU training quality and favors CPU training",
+      "version_strategy": "Pin a reviewed upstream release or commit and its requirements; record exact resolved versions; do not use an unreviewed latest build",
+      "isolation": "Separate project venv/conda environment or standalone application folder; keep the current working environment intact",
+      "installation_advice": "Choose upstream OS-specific install procedure in a new environment; distinguish inference from training and confirm model/voice permissions.",
+      "download_size_gb": null,
+      "rollback": "Remove only the newly created environment/application folder after preserving inputs and outputs; restore prior PATH/settings if changed",
+      "verify_commands": [
+        "python -c \"import torch; print(torch.__version__)\"",
+        "ffmpeg -version"
+      ]
+    },
+    "real_esrgan": {
+      "official_source": "https://github.com/xinntao/Real-ESRGAN",
+      "verified_on": "2026-10-12",
+      "license_url": "https://github.com/xinntao/Real-ESRGAN/blob/master/LICENSE",
+      "requirements": [
+        "Upstream requirements, BasicSR/Real-ESRGAN, selected restoration weights"
+      ],
+      "compatibility": "CPU/CUDA candidates depend on build; CPU smoke must explicitly check float32 (--fp32), image size and tile behavior. Alternate NCNN/Vulkan binary is a separate route, not proved by torch MPS.",
+      "version_strategy": "Pin a reviewed upstream release or commit and its requirements; record exact resolved versions; do not use an unreviewed latest build",
+      "isolation": "Separate project venv/conda environment or standalone application folder; keep the current working environment intact",
+      "installation_advice": "Use pinned upstream Python environment or reviewed official linked NCNN distribution; weights and execution remain separate.",
+      "download_size_gb": null,
+      "rollback": "Remove only the newly created environment/application folder after preserving inputs and outputs; restore prior PATH/settings if changed",
+      "verify_commands": [
+        "python inference_realesrgan.py --help"
+      ],
+      "evidence_urls": [
+        "https://raw.githubusercontent.com/xinntao/Real-ESRGAN/master/inference_realesrgan.py"
+      ]
+    }
+  },
+  "tasks": {
+    "editing": {
+      "required_tools": [
+        "ffmpeg",
+        "ffprobe"
+      ],
+      "smoke_check_name": "editing",
+      "scope": "Only the selected tool route; task alternatives may be chosen manually"
+    },
+    "panel": {
+      "required_tools": [
+        "python"
+      ],
+      "smoke_check_name": "panel",
+      "scope": "Only the selected tool route; task alternatives may be chosen manually"
+    },
+    "lineart": {
+      "required_tools": [
+        "python",
+        "git",
+        "anime2sketch"
+      ],
+      "smoke_check_name": "lineart",
+      "scope": "Only the selected tool route; task alternatives may be chosen manually"
+    },
+    "animation": {
+      "required_tools": [
+        "python",
+        "git",
+        "tooncomposer"
+      ],
+      "smoke_check_name": "animation",
+      "scope": "Only the selected tool route; task alternatives may be chosen manually"
+    },
+    "voice": {
+      "required_tools": [
+        "python",
+        "git",
+        "ffmpeg",
+        "ffprobe",
+        "gpt_sovits"
+      ],
+      "smoke_check_name": "voice",
+      "scope": "Only the selected tool route; task alternatives may be chosen manually"
+    },
+    "upscale": {
+      "required_tools": [
+        "python",
+        "git",
+        "real_esrgan"
+      ],
+      "smoke_check_name": "upscale",
+      "scope": "Only the selected tool route; task alternatives may be chosen manually"
+    }
+  }
+}
